@@ -76,7 +76,7 @@ table {
 	border-spacing: 0;
 }
 ```
-Veja que ele divide as tags em grupos que devem receber valores genérios, como `margin: 0` , `border: 0` , `padding: 0` e outras que precisam de valores mais específicos, como 
+Veja que ele divide as tags em grupos que devem receber valores genéricos, como `margin: 0` , `border: 0` , `padding: 0` e outras que precisam de valores mais específicos, como 
 ```
 ol, ul {
 	list-style: none;
