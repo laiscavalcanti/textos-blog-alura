@@ -4,10 +4,10 @@ Cada browser tem a sua apresentação por padrão, esse comportamento individual
 
 Essas inconstâncias em que os navegadores tem no momento de rendenrizar os elementos, que  podem ser sutis ou mais grosseiras, como por exemplo, medidas diferentes para o margin superior e inferior em títulos ou a altura da linha padrão - o que poderá afetar profundamente as alturas dos elementos, alinhamentos, etc. Segue exemplo de como o reset css se comporta quando usado:
 
-*comReset*
+*comResetCSS*
 ![comResetCSS](img/semReset.png)
 
-*semReset*
+*semResetCSS*
 ![semResetCSS](img/comReset.png)
 
 Conseguimos observar grandes diferenças do que o reset css pode fazer com o layout. Resetamos tags que tinham valores iniciais o que ocasionava uma pré formatação e nos retornava um estilo básico, como nas tags *h1*, *a*, *body*, etc. 
@@ -76,4 +76,29 @@ table {
 	border-spacing: 0;
 }
 ```
-Veja que ele elenca os elementos que ele deseja retirar as margens 
+Veja que ele divide as tags em grupos que devem receber valores genérios, como `margin: 0` , `border: 0` , `padding: 0` e outras que precisam de valores mais específicos, como 
+```
+ol, ul {
+	list-style: none;
+}
+```
+em que ele retira o estilo padrão da tag que utiliza circulos nos destaque dos itens de lista não odernada.
+
+Há formas simplicadas também que, particularmente, utilizo mais em meus projetos, como o uso de seletores universais:
+```
+*, 
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+```
+Assim, ao passo da necessidade de adicionar valores à propriedades, pode adicionar.
+
+**Como utilizar?**
