@@ -1,8 +1,24 @@
-**Afinal, o que é o reset.css?**
+---
+title: "Reset CSS: o que é?"
+date: pode deixar vazio
+draft: true
+description: "Reset CSS é uma técnica usada por desenvolvedores e desenvolvedoras Front-End com o objetivo de minimizar o comporamento padrão de cada navegador"
+author: "seu user da alura"
+authorEmail: "lais.cavalcante@caelum.com.br"
+main_guide: "formacao-front-end"
+main_category: "front-end"
+guides:
+ - "formacao-front-end"
+
+---
+
+Na Alura, faço parte da equipe do Apoio Educacional e em meio à várias dúvidas que surgem no Fórum, algumas são direcionadas à prática do *reset CSS*. Aqui, vamos juntos entender melhor essa técnica.
+
+# Reset CSS: o que é
 
 Cada browser tem a sua apresentação por padrão, esse comportamento individual de cada browser pode gerar conflitos de layout diante do seu projeto web. E isso era um problema enfretado por programodores Front-end. Apesar de ser uma técnica *simples*, chegar em concenso mínimo sobre como "forçar" todos os browsers se comportarem igualmente, não foi fácil. Em 2007, o Eric Meyer (iremos falar mais a frente dele) em seu blog, levantou a discussão de como lidar com essas incosistências dos browsers e gerou uma grande discussão, vale a pena dar uma lida, aqui. [http://meyerweb.com/eric/thoughts/2007/04/18/reset-reasoning/]
 
-Essas inconstâncias em que os navegadores tem no momento de rendenrizar os elementos, que  podem ser sutis ou mais grosseiras, como por exemplo, medidas diferentes para o margin superior e inferior em títulos ou a altura da linha padrão - o que poderá afetar profundamente as alturas dos elementos, alinhamentos, etc. Segue exemplo de como o reset css se comporta quando usado:
+Essas inconstâncias em que os navegadores tem no momento de rendenrizar os elementos, que  podem ser sutis ou mais grosseiras, como por exemplo, medidas diferentes para o margin superior e inferior em títulos ou a altura da linha padrão - o que poderá afetar profundamente as alturas dos elementos, alinhamentos, etc. Segue exemplo de como o reset css se comporta quando usado (ambos exemplos foram feitos prints do navegador Firefox):
 
 *comResetCSS*
 ![comResetCSS](img/semReset.png)
@@ -14,13 +30,13 @@ Conseguimos observar grandes diferenças do que o reset css pode fazer com o lay
 
 A técnica do reset css é uma forma de mitigar essas diferenças e padronizar a estilização, sobrepondo a formatação original do browsers com uma folha de estilo. Assim, o reset css se tornou uma arquivo quase que obrigatório em cada projeto web que tem por aí.
 
-**E como usar?**
+# Como usar?
 
 Já sabemos que se trata de uma folha de estilo que aplica estilização aos elementos HTML. E como uma folha de estilo, pode-se ser usada como normalmente é utilizada folhas de estilo em um projeto web, seja dentro do arquivo HTML, seja num arquivo externo (e que poderá ser acessado por todo os demais arquivos).
 
 O mais habitual é que antes de se começar a estilizar o projeto, o arquivo reset css já seja adicionado para que a estilização que será feita baseada na remoção da formatação original dos browsers. Pois caso o Reset CSS for adicioado no meio do projeto, por exemplo, pode gerar dores de cabeça já que o layout foi criado utilizando como referência a formatação dos navegadores e não na *padronização* dos elementos que foram *resetados*.
 
-**Como criar o Reset CSS?**
+# Como criar o Reset CSS?
 
 Compreendemos que para mitigarmos as formatações originais entre diferentes navegadores, precisamos selecionar todas as tags e adicionar sobre elas os resets, como margin, padding, border, etc. 
 
@@ -101,4 +117,15 @@ body{
 ```
 Assim, ao passo da necessidade de adicionar valores à propriedades, pode adicionar.
 
-**Como utilizar?**
+# Como utilizar?
+
+Em seu arquivo html, dentro da tag *head*, utilize a tag *link*, para chamar o arquivo em que estará o seu reset CSS, como no exemplo:
+
+```
+<link rel="stylesheet" href="reset.css">
+```
+Assim, a aparência do seu arquivo será alterada resentando as tags com as propriedade com as quais construi o seu arquivo reset.
+
+Com o reset CSS adicionado ao projeto, os demais estilos do layout podem ser aplicados sem prejuízo.
+
+Se você ainda não faz parte Alura e quer saber mais como funciona o reset CSS e outras técnicas e  aprendizados do mundo do Front-End. [**aqui na Alura temos uma formação de HTML5 e CSS3**](https://www.alura.com.br/formacao-html-e-css), nela você aprenderá muito mais do universo Front-End.
