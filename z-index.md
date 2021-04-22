@@ -17,3 +17,6 @@ Quando pensamos de posicionamento de elementos, a primeira coisa que vem a nossa
 
 E para que essa propriedade tenha efeito, o elemento precisa ter a proprideade `posisition` definida diferente de `static`, que é a o valor de posicionamento padrão. Ou seja, definida como `fixed`, `sticky`, `relative` ou `absolute` .
 
+# A sobreposição de elementos sem o z-index:
+
+Sem a propriedade `z-index`, o posicionamento
