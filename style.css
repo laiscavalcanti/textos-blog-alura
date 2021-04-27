@@ -9,15 +9,18 @@ div{
 }
 
 .square1{
-    background-color: aquamarine;
+    background-color:blueviolet;
+    z-index: 2;
 }
 .square2{
     background-color: lightcoral;
     margin-left: 3rem;
     margin-top: 3rem;
+    z-index: 3;
 }
 .square3{
     background-color:  lightgreen;
     margin-left: 6rem;
     margin-top: 6rem;
+    z-index: 1;
 }
